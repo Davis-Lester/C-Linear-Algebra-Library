@@ -44,14 +44,16 @@ Sparse matrices save memory when most elements are zero.
 
 ```cpp
 #define USE_SPARSE_MATRIX
-#include "Matrix.hpp"```
+#include "Matrix.hpp"
+```
 
 ### 📦 Installation
 * Include ```Matrix.hpp``` and its header in your project. No external dependencies required. Works on any standard C++17 compiler.
 
 ```cpp
 #include "Matrix.hpp"
-using namespace std;```
+using namespace std;
+```
 
 ### 💻 Example Usage
 ```cpp
@@ -73,7 +75,8 @@ int main() {
     auto sparse = convertToSparse(A);
 
     return 0;
-}```
+}
+```
 
 <div align="center">
 
