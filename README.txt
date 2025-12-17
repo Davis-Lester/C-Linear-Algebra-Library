@@ -1,58 +1,60 @@
-Linear Algebra Library – Advanced Linear Algebra in C++
+<div align="center">
 
-This linear algebra library is a lightweight C++ library for 2D matrix operations, including matrix creation, concatenation, inversion, RREF, determinant calculation, and sparse conversion.
-Designed for solving voltage equations, this library makes linear algebra intuitive and fast for both dense and sparse matrices.
+# Linear Algebra Library
+### *Advanced Linear Algebra in C++*
 
-Features
-1. Identity and Zero Matrices
-2. Matrix Concatenation (LEFT, RIGHT, TOP, BOTTOM)
-3. Truncation (remove rows or columns)
-4. Reduced Row Echelon Form (RREF) – solve systems of linear equations
-5. Determinant Calculation
-6. Transpose & Inverse
-7. Sparse Matrix Conversion
-8. Operator Overloads (+, -, *)
-9. Robust Error Handling
+![C++17](https://img.shields.io/badge/Language-C%2B%2B17-00599C?style=flat&logo=cplusplus&logoColor=white)
+![UF Engineering](https://img.shields.io/badge/University%20of%20Florida-EE-FA4616?style=flat&logo=university-of-florida&logoColor=white)
+![Status](https://img.shields.io/badge/Project-Linear%20Algebra-blueviolet?style=flat)
 
-Dense vs Sparse Matrices
+**Developed by Davis Lester**
+*Sophomore Electrical Engineering Student & Peer Advisor @ University of Florida*
 
-Dense Matrix (all elements stored):
-Matrix A (4x4):
-1 0 0 0
-0 5 0 0
-0 0 0 2
-0 0 0 0
+---
 
-Sparse Matrix (only non-zero elements stored as [row, col, value]):
-Sparse(A):
-[0,0,1]
-[1,1,5]
-[2,3,2]
+### 🚀 Overview
+This linear algebra library is a lightweight C++ library for 2D matrix operations. Designed for solving voltage equations, this library makes linear algebra intuitive and fast for both dense and sparse matrices.
+
+</div>
+
+---
+
+### ✨ Features
+1. **Identity and Zero Matrices**: Quick generation of standard matrices.
+2. **Matrix Concatenation**: Combine matrices via `LEFT`, `RIGHT`, `TOP`, or `BOTTOM`.
+3. **Truncation**: Effortlessly remove specific rows or columns.
+4. **Reduced Row Echelon Form (RREF)**: Solve systems of linear equations.
+5. **Determinant Calculation**: Efficiently compute matrix determinants.
+6. **Transpose & Inverse**: Essential transformations for circuit analysis.
+7. **Sparse Matrix Conversion**: Optimize memory for large-scale systems.
+8. **Operator Overloads**: Natural syntax using `+`, `-`, and `*`.
+9. **Robust Error Handling**: Built-in validation for matrix dimensions.
+
+---
+
+### ⚡ Dense vs. Sparse Matrices
+
+
+* **Dense Matrix**: All elements are stored (standard $m \times n$ storage).
+* **Sparse Matrix**: Only non-zero elements are stored as `[row, col, value]`.
 
 Sparse matrices save memory when most elements are zero.
 
-Preprocessor Choice: Dense vs Sparse
-This library allows you to compile your program for dense or sparse matrix operations using preprocessor directives.
 
-Example:
+
+```cpp
 #define USE_SPARSE_MATRIX
+#include "Matrix.hpp"```
+
+### 📦 Installation
+* Include ```Matrix.hpp``` and its header in your project. No external dependencies required. Works on any standard C++17 compiler.
+
+```cpp
 #include "Matrix.hpp"
+using namespace std;```
 
-USE_SPARSE_MATRIX → enables sparse matrix optimizations
-Not defined → uses normal dense matrix operations
-This makes it easy to switch modes without modifying your code logic.
-
-
-Installation
-Include Matrix.hpp and its header in your project:
-
-#include "Matrix.hpp"
-using namespace std;
-
-No external dependencies required. Works on any standard C++17 compiler.
-
-Example Usage
-
+### 💻 Example Usage
+```cpp
 #include "Matrix.hpp"
 
 int main() {
@@ -71,4 +73,8 @@ int main() {
     auto sparse = convertToSparse(A);
 
     return 0;
-}
+}```
+
+<div align="center">
+
+</div>
